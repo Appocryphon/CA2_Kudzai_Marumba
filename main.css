@@ -63,7 +63,7 @@ h2 {
     padding: .25em 0 .5em;
 }
 h1, h2 {
-    color: #333;
+    color: rgb(228, 13, 210);
 }
 ul {
     margin: 0 0 1em 0;
@@ -78,7 +78,7 @@ a {
     font-weight: bold;
 }
 a:hover {
-    color: rgb(208, 133, 4);
+    color: rgb(208, 4, 99);
 }
 table {
     border: 1px solid black;
