@@ -38,27 +38,111 @@ $statement3->execute();
 $records = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
-<div class="container">
-<?php
-include('includes/header.php');
-?>
-<h1>Record List</h1>
 
-<aside>
-<!-- display a list of categories -->
-<h2>Categories</h2>
-<nav>
-<ul>
-<?php foreach ($categories as $category) : ?>
-<li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
-<?php echo $category['categoryName']; ?>
-</a>
-</li>
-<?php endforeach; ?>
-</ul>
-</nav>          
-</aside>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" type="text/css" href="opener.css">
+</head>
 
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<ul class="navbar-nav">
+<li class="nav-item">
+      <a class="nav-link" href="opener.php">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href=".?category_id=1">Manga</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href=".?category_id=2">Anime</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href=".?category_id=3">Merch</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="add_record_form.php">Add Record</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="category_list.php">Manage Categories</a>
+    </li>
+
+  </ul>
+
+  <form class="form-inline" action="/action_page.php">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search...">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+</nav>
+</body>
+
+
+
+
+
+<style>
+    body
+    {
+        background-image: url('https://www.tomboweurope.com/fileadmin/_processed_/a/c/csm_Manga_sketch5_aff0e0d6df.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+table {
+    border: 1px;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px;
+    padding: .2em .5em .2em .5em;
+    vertical-align: center;
+    text-align: center;
+}
+form {
+    margin: 0;
+}
+footer {
+    clear: both;
+    margin-top: 1em;
+    border-top: 2px solid black;
+}
+footer p {
+    text-align: right;
+    font-size: 80%;
+    margin: 1em 0;
+}
+
+nav form
+{
+    padding-left: 950px;
+}
+section
+{
+    margin-right: 200px;
+}
+table th, td
+{
+    padding-left: 150px;
+    color: purple;
+}
+
+h2
+{
+    text-align: center;
+    padding-bottom: 50px;   
+}
+
+    
+</style>
+
+
+<body>
 <section>
 <!-- display a table of records -->
 <h2><?php echo $category_name; ?></h2>
@@ -94,9 +178,9 @@ value="<?php echo $record['categoryID']; ?>">
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Record</a></p>
-<p><a href="category_list.php">Manage Categories</a></p>
 </section>
 <?php
 include('includes/footer.php');
 ?>
+
+</body>

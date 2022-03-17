@@ -1,5 +1,5 @@
 <footer>
-<p>&copy; <?php echo date("Y"); ?> Shingeki no Manga-Store</p>
+<p>&copy; <?php echo date("Y"); ?> Mise Manga e no Kōgeki</p>
 </footer>
 </div><!-- close div container -->
 </body>
